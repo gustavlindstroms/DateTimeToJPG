@@ -86,7 +86,22 @@ namespace DateTimeToJPG
             }
             return dateTimesArray;
         }
-        
-        
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string message =
+                "Developed by Gustav Lindström. Open Soruce - free use: https://github.com/gustavlindstroms/DateTimeToJPG";
+            MessageBoxButtons buttons = MessageBoxButtons.OK;
+            DialogResult result;
+
+            // Displays the MessageBox.
+            result = MessageBox.Show(message, "",  buttons);
+            if (result == System.Windows.Forms.DialogResult.Yes)
+            {
+                // Closes the parent form.
+                this.Close();
+            }
+        }
     }
 }
