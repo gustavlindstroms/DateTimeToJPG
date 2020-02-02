@@ -22,6 +22,12 @@ namespace DateTimeToJPG
 
         private void execute_Btn_Click(object sender, EventArgs e)
         {
+
+            progressBar1.Visible = true;
+            progressBar1.Maximum = filepaths.Length;
+            progressBar1.Minimum = 1;
+            progressBar1.Value = 1;
+            progressBar1.Step = 1;
             var watch = new System.Diagnostics.Stopwatch();
             watch.Start();
             
@@ -33,11 +39,12 @@ namespace DateTimeToJPG
             string[] dateTimeArray = GetDateTakenFromImage(filepaths, filepaths.Length);
             for (int i = 0; i < filepaths.Length; i++)
             {
+                
                 Bitmap bmp = new Bitmap(filepaths[i]);
                 Graphics gra = Graphics.FromImage(bmp);
                 gra.DrawString(dateTimeArray[i], new Font("Verdana", 16), Brushes.MediumBlue, new PointF(0, 0));
                 bmp.Save(savePath + @"\" + i +".jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
-               
+                progressBar1.PerformStep();
                 
             }
             watch.Stop();

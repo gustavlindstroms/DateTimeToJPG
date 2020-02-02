@@ -36,6 +36,7 @@
             this.exe_btn = new System.Windows.Forms.Button();
             this.response_Lbl = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize) (this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,7 +75,7 @@
             // 
             // response_Lbl
             // 
-            this.response_Lbl.Location = new System.Drawing.Point(78, 425);
+            this.response_Lbl.Location = new System.Drawing.Point(87, 470);
             this.response_Lbl.Name = "response_Lbl";
             this.response_Lbl.Size = new System.Drawing.Size(397, 28);
             this.response_Lbl.TabIndex = 3;
@@ -90,18 +91,26 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(144, 425);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(257, 31);
+            this.progressBar1.TabIndex = 5;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(559, 460);
+            this.ClientSize = new System.Drawing.Size(559, 507);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.response_Lbl);
             this.Controls.Add(this.exe_btn);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.select_Folder_Btn);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "DateTimeToJPG";
             ((System.ComponentModel.ISupportInitialize) (this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
         }
@@ -114,5 +123,6 @@
         private System.Windows.Forms.Button exe_btn;
         private System.Windows.Forms.Label response_Lbl;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
