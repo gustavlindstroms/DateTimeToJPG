@@ -9,6 +9,7 @@ DateTimeToJPG is a simple program that batch stamps an image with the files crea
 
   - Added progressbar
   - PNG support
+  - Installer included
 
 
 
