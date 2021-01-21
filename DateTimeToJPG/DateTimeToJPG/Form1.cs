@@ -30,23 +30,26 @@ namespace DateTimeToJPG
             progressBar1.Step = 1;
             var watch = new System.Diagnostics.Stopwatch();
             watch.Start();
-            
-            string savePathFullDir = filepaths[1];
+
+            string savePathFullDir = filepaths[0];
             Console.WriteLine(savePathFullDir);
-            
+
             var savePath = Path.GetDirectoryName(savePathFullDir);
             Console.WriteLine(savePath);
             string[] dateTimeArray = GetDateTakenFromImage(filepaths, filepaths.Length);
+
+
             for (int i = 0; i < filepaths.Length; i++)
             {
-                
+
                 Bitmap bmp = new Bitmap(filepaths[i]);
                 Graphics gra = Graphics.FromImage(bmp);
                 gra.DrawString(dateTimeArray[i], new Font("Verdana", 16), Brushes.MediumBlue, new PointF(0, 0));
-                bmp.Save(savePath + @"\" + i +".jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
+                bmp.Save(savePath + @"\" + i + ".jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
                 progressBar1.PerformStep();
-                
+
             }
+
             watch.Stop();
             response_Lbl.Text = $"Operation completed sucessfully in {watch.ElapsedMilliseconds} ms";
         }
@@ -62,11 +65,11 @@ namespace DateTimeToJPG
                     filepaths = Directory.GetFiles(fbd.SelectedPath);
 
                     int count = filepaths.Count() - 1;
-                    
-                    
+
+
                     for (int i = 0; i < filepaths.Length; i++)
                     {
-                        dataGridView1.Rows.Add(new object[] {filepaths[i] });
+                        dataGridView1.Rows.Add(new object[] { filepaths[i] });
                     }
 
                     response_Lbl.Text = count + " files selected in folder";
@@ -80,7 +83,7 @@ namespace DateTimeToJPG
         public static string[] GetDateTakenFromImage(string[] path, int count)
         {
             string[] dateTimesArray = new string[count];
-            for(int i = 0; i < path.Length; i++)
+            for (int i = 0; i < path.Length; i++)
             {
                 using (FileStream fs = new FileStream(path[i], FileMode.Open, FileAccess.Read))
                 using (Image myImage = Image.FromStream(fs, false, false))
@@ -103,7 +106,7 @@ namespace DateTimeToJPG
             DialogResult result;
 
             // Displays the MessageBox.
-            result = MessageBox.Show(message, "",  buttons);
+            result = MessageBox.Show(message, "", buttons);
             if (result == System.Windows.Forms.DialogResult.Yes)
             {
                 // Closes the parent form.
