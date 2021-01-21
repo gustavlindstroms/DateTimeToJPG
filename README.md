@@ -16,3 +16,5 @@ DateTimeToJPG is a simple program that stamps an image with the file creation da
 
 --
 ![Image description](https://i.imgur.com/mgTFCB8.png)
+![Image description](https://i.imgur.com/WEu1GDl.png)
+
