@@ -5,13 +5,14 @@ DateTimeToJPG is a simple program that stamps an image with the file creation da
   - Files need to have a creation date in metadata
 
 
-# New Features!
+# updates
 
   - Added progressbar
   - PNG support
   - .exe installer included
 
-
+2021
+  -Fixed index bug
 
 
 --
