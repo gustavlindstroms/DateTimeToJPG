@@ -9,7 +9,7 @@ DateTimeToJPG is a simple program that stamps an image with the file creation da
 
   - Added progressbar
   - PNG support
-  - precompiled included
+  - .exe installer included
 
 
 
