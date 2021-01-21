@@ -1,5 +1,5 @@
 # DateTimeToJPG
-DateTimeToJPG is a simple program that batch stamps an image with the file creation date.
+DateTimeToJPG is a simple program that stamps an image with the file creation date, can handle batch operations.
 
   - Works with JPEG
   - Files need to have a creation date in metadata
